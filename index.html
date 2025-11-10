@@ -1,71 +1,84 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!doctype html><html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>거산교회</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
-
 <style>
-    body{
-        font-family: "Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
-        margin:0;
-        padding:0;
-        background: linear-gradient(#0A773E, #C9EDCC);
-        text-align:center;
-        color:#055d28;
-    }
-
-    h1{
-        font-size:34px;
-        font-weight:700;
-        margin-top:40px;
-        margin-bottom:30px;
-        color:white;
-    }
-    p{
-        font-size:18px;
-        color:white;
-        margin:6px 0;
-    }
-
-    ul{
-        list-style:none;
-        padding:0;
-        margin-top:50px;
-    }
-    ul li{
-        margin:22px 0;
-    }
-    a{
-        color:#055d28;
-        font-size:28px;
-        font-weight:700;
-        text-decoration:none;
-    }
-    a:hover{
-        text-decoration:underline;
-    }
+  :root{--brand:#2E7D32;--brand2:#60A85B;--bg:#f5fff5;--ink:#223;--soft:#c8e6c9;}
+  *{box-sizing:border-box} html,body{margin:0;padding:0}
+  body{font-family:"Nanum Gothic",system-ui,-apple-system,Segoe UI,Roboto,"Noto Sans KR",sans-serif;background:var(--bg);color:var(--ink)}
+  a{color:var(--brand);text-decoration:none} a:hover{opacity:.9}
+  nav{position:sticky;top:0;z-index:999;background:#fff;border-bottom:1px solid var(--soft)}
+  nav .inner{max-width:1100px;margin:0 auto;padding:10px 18px;display:flex;gap:22px;align-items:center}
+  nav .logo{font-weight:800;color:var(--brand)}
+  nav ul{list-style:none;display:flex;gap:22px;margin:0;padding:0}
+  nav li a{display:inline-block;padding:6px 2px;font-weight:700;border-bottom:2px solid transparent}
+  nav li a:hover{border-color:var(--brand)}
+  header.hero{background:linear-gradient(180deg,var(--brand),var(--brand2));color:#fff;text-align:center;padding:84px 16px 56px}
+  header.hero h1{margin:0 0 8px;font-size:clamp(26px,4vw,40px)} header.hero p{margin:0;opacity:.95}
+  .wrap{max-width:1000px;margin:28px auto;padding:0 16px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+  .card{background:#fff;border:1px solid var(--soft);border-radius:14px;box-shadow:0 2px 8px rgba(0,0,0,.06);padding:20px}
+  .card h2{margin:0 0 10px;color:var(--brand)}
+  .bullets{padding-left:18px;margin:0} .bullets li{margin:6px 0}
+  .btns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:18px}
+  .btn{background:#fff;border:2px solid #fff;color:var(--brand);border-radius:999px;padding:10px 16px;font-weight:800}
+  .btn.filled{background:#1b5e20;color:#fff}
+  footer{margin:36px 0 48px;text-align:center;color:#667}
+  .imgframe{overflow:hidden;border-radius:12px;border:1px solid var(--soft);background:#fff}
+  .imgframe img{width:100%;height:auto;display:block}
+  .twocol{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .fact{color:var(--brand);font-weight:700}
 </style>
-</head>
+</head><body>
 
-<body>
+<nav>
+  <div class="inner">
+    <div class="logo">거산교회</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">교회소개</a></li>
+      <li><a href="prayer.html">기도제목</a></li>
+      <li><a href="news.html">교회소식</a></li>
+    </ul>
+  </div>
+</nav>
 
-<h1>“오라 우리가 여호와의 산에 올라가자”</h1>
-<p>거룩한 산을 향하는 선교적 마을교회</p>
-<p>아산 송악면 거산교회</p>
-
-<div style="margin-top:40px;">
-   <img src="church.jpg" width="360" style="border-radius:10px;">
+<header class="hero">
+  <h1>“오라 우리가 여호와의 산에 올라가자”</h1>
+  <p>거룩한 산을 향하는 선교적 마을교회 — 아산 송악면 거산교회</p>
+  <div class="btns">
+    <a class="btn filled" href="about.html">교회소개</a>
+    <a class="btn" href="prayer.html">기도제목</a>
+    <a class="btn" href="news.html">교회소식</a>
+  </div>
+</header>
+<div class="wrap">
+  <div class="grid">
+    <div class="card">
+      <h2>환영합니다</h2>
+      <p>거산교회는 <span class="fact">거산(巨山), 거룩한 산</span>의 의미처럼, 하나님의 임재가 머무는 공동체를 꿈꿉니다. 예수님과 동행하며 마을과 이웃을 섬기는 선교적 교회입니다.</p>
+      <ul class="bullets">
+        <li>주일예배: <strong>오전 10시</strong></li>
+        <li>수요예배: <strong>오전 10시</strong></li>
+        <li>주소: 충남 아산시 송악면 외암로 277-3</li>
+        <li>연락처: 041-543-0211 · 이메일: bedts17@gmail.com</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>교회 전경</h2>
+      <div class="imgframe"><img src="geosan_church.jpg" alt="거산교회 전경(이미지 업로드 필요)"></div>
+      <p class="note">* 이미지 파일을 나중에 <code>geosan_church.jpg</code> 이름으로 업로드하면 자동 표시됩니다.</p>
+    </div>
+    <div class="card">
+      <h2>담임목사</h2>
+      <div class="twocol">
+        <div class="imgframe"><img src="pastor_photo.jpg" alt="담임목사 사진(이미지 업로드 필요)"></div>
+        <div>
+          <p>예수님과 동행하며 닮아가는 삶을 소망합니다. 마을과 다음세대를 섬기며, 이웃과 열방을 향한 선교적 발걸음을 함께 내딛습니다.</p>
+        </div>
+      </div>
+      <p class="note">* 이미지 파일을 나중에 <code>pastor_photo.jpg</code> 이름으로 업로드하면 자동 표시됩니다.</p>
+    </div>
+  </div>
 </div>
-
-<ul>
-    <li><a href="about.html">교회소개</a></li>
-    <li><a href="prayer.html">기도제목</a></li>
-    <li><a href="news.html">교회소식</a></li>
-    <li><a href="nanum.html">거산나눔터</a></li>
-</ul>
-
-</body>
-</html>
+<footer>© 거산교회. All rights reserved.</footer>
+</body></html>

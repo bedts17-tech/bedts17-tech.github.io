@@ -1,47 +1,78 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>교회소개 | 거산교회</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root { --fg:#111; --muted:#666; --link:#0a7d3b; --card:#f7faf8; }
-    *{box-sizing:border-box}
-    body{font-family:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif; margin:0; color:var(--fg);}
-    .wrap{max-width:960px; margin:0 auto; padding:28px 20px;}
-    h1{font-size:28px; margin:0 0 18px; font-weight:700}
-    .hero{width:100%; display:block; border-radius:8px;}
-    .portrait{width:100%; max-width:360px; display:block; border-radius:10px; box-shadow:0 6px 20px rgba(0,0,0,.08)}
-    .row{display:flex; gap:24px; flex-wrap:wrap; align-items:flex-start; margin:18px 0 8px}
-    .grow{flex:1 1 320px}
-    p{line-height:1.8; margin:12px 0}
-    a{color:var(--link); text-decoration:none}
-    a:hover{text-decoration:underline}
-    .back{margin-top:24px}
-    .badge{display:inline-block; background:var(--card); padding:6px 10px; border-radius:8px; font-size:14px; color:#0a7d3b; font-weight:600;}
-  </style>
-</head>
-<body>
-  <div class="wrap">
-    <h1>교회소개</h1>
-      <div style="text-align:center;">
-    <img src="pastor.jpg" width="300">
-</div>
-    <!-- 1) 교회 전경 -->
-    <img src="church.jpg" alt="거산교회 전경" class="hero">
+<!doctype html><html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>교회소개 - 거산교회</title>
+<style>
+  :root{--brand:#2E7D32;--brand2:#60A85B;--bg:#f5fff5;--ink:#223;--soft:#c8e6c9;}
+  *{box-sizing:border-box} html,body{margin:0;padding:0}
+  body{font-family:"Nanum Gothic",system-ui,-apple-system,Segoe UI,Roboto,"Noto Sans KR",sans-serif;background:var(--bg);color:var(--ink)}
+  a{color:var(--brand);text-decoration:none} a:hover{opacity:.9}
+  nav{position:sticky;top:0;z-index:999;background:#fff;border-bottom:1px solid var(--soft)}
+  nav .inner{max-width:1100px;margin:0 auto;padding:10px 18px;display:flex;gap:22px;align-items:center}
+  nav .logo{font-weight:800;color:var(--brand)}
+  nav ul{list-style:none;display:flex;gap:22px;margin:0;padding:0}
+  nav li a{display:inline-block;padding:6px 2px;font-weight:700;border-bottom:2px solid transparent}
+  nav li a:hover{border-color:var(--brand)}
+  header.hero{background:linear-gradient(180deg,var(--brand),var(--brand2));color:#fff;text-align:center;padding:84px 16px 56px}
+  header.hero h1{margin:0 0 8px;font-size:clamp(26px,4vw,40px)} header.hero p{margin:0;opacity:.95}
+  .wrap{max-width:1000px;margin:28px auto;padding:0 16px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+  .card{background:#fff;border:1px solid var(--soft);border-radius:14px;box-shadow:0 2px 8px rgba(0,0,0,.06);padding:20px}
+  .card h2{margin:0 0 10px;color:var(--brand)}
+  .bullets{padding-left:18px;margin:0} .bullets li{margin:6px 0}
+  .btns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:18px}
+  .btn{background:#fff;border:2px solid #fff;color:var(--brand);border-radius:999px;padding:10px 16px;font-weight:800}
+  .btn.filled{background:#1b5e20;color:#fff}
+  footer{margin:36px 0 48px;text-align:center;color:#667}
+  .imgframe{overflow:hidden;border-radius:12px;border:1px solid var(--soft);background:#fff}
+  .imgframe img{width:100%;height:auto;display:block}
+  .twocol{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .fact{color:var(--brand);font-weight:700}
+</style>
+</head><body>
 
-    <!-- 2) 담임목사 -->
-    <div class="row">
-      <img src="pastor.jpg" alt="담임목사 도성구" class="portrait">
-      <div class="grow">
-        <p class="badge">담임목사 도성구</p>
-        <p>거산교회는 하나님 나라를 이 땅 가운데 세워나가기 위해 예배하고, 사랑하고, 섬기는 공동체입니다.</p>
-        <p>지역을 섬기고 다음 세대를 세우며, 복음으로 이웃과 열방을 향해 나아갑니다.</p>
-      </div>
-    </div>
-
-    <p class="back"><a href="index.html">← 메인으로 돌아가기</a></p>
+<nav>
+  <div class="inner">
+    <div class="logo">거산교회</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">교회소개</a></li>
+      <li><a href="prayer.html">기도제목</a></li>
+      <li><a href="news.html">교회소식</a></li>
+    </ul>
   </div>
-</body>
-</html>
+</nav>
+
+<header class="hero">
+  <h1>교회소개</h1>
+  <p>거산교회는 거산(巨山), 또는 거룩한 산을 의미하며, 하나님의 임재가 머무는 공동체를 꿈꿉니다.</p>
+</header>
+<div class="wrap">
+  <div class="grid">
+    <div class="card"><h2>비전</h2>
+      <p>“오라 우리가 여호와의 산에 올라가자.” 하나님의 산에서 배워 세상으로 흘려보내는 교회.</p></div>
+    <div class="card"><h2>사명</h2>
+      <ul class="bullets">
+        <li>With Jesus: 예수님과 동행하는 일상 예배</li>
+        <li>With Next: 다음세대를 세우는 제자훈련</li>
+        <li>With Neighbors: 마을과 이웃을 섬기는 거산나눔터</li>
+        <li>With Nations: 북한과 열방을 위한 중보</li>
+      </ul></div>
+    <div class="card"><h2>가치</h2>
+      <ul class="bullets"><li>거룩 · 동행 · 섬김 · 소망</li></ul></div>
+    <div class="card"><h2>사진</h2>
+      <div class="twocol">
+        <div class="imgframe"><img src="geosan_church.jpg" alt="교회 전경(업로드 필요)"></div>
+        <div class="imgframe"><img src="pastor_photo.jpg" alt="담임목사 사진(업로드 필요)"></div>
+      </div>
+      <p class="note">* 두 이미지를 같은 폴더에 <code>geosan_church.jpg</code>, <code>pastor_photo.jpg</code> 이름으로 올리면 표시됩니다.</p>
+    </div>
+    <div class="card"><h2>예배/연락</h2>
+      <ul class="bullets">
+        <li>주일예배: <strong>오전 10시</strong> / 수요예배: <strong>오전 10시</strong></li>
+        <li>주소: 충남 아산시 송악면 외암로 277-3</li>
+        <li>연락처: 041-543-0211 · 이메일: bedts17@gmail.com</li>
+      </ul></div>
+  </div>
+</div>
+<footer>© 거산교회. All rights reserved.</footer>
+</body></html>
