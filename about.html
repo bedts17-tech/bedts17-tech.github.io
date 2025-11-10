@@ -1,15 +1,45 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<title>교회소개</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>교회소개 | 거산교회</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --fg:#111; --muted:#666; --link:#0a7d3b; --card:#f7faf8; }
+    *{box-sizing:border-box}
+    body{font-family:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif; margin:0; color:var(--fg);}
+    .wrap{max-width:960px; margin:0 auto; padding:28px 20px;}
+    h1{font-size:28px; margin:0 0 18px; font-weight:700}
+    .hero{width:100%; display:block; border-radius:8px;}
+    .portrait{width:100%; max-width:360px; display:block; border-radius:10px; box-shadow:0 6px 20px rgba(0,0,0,.08)}
+    .row{display:flex; gap:24px; flex-wrap:wrap; align-items:flex-start; margin:18px 0 8px}
+    .grow{flex:1 1 320px}
+    p{line-height:1.8; margin:12px 0}
+    a{color:var(--link); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .back{margin-top:24px}
+    .badge{display:inline-block; background:var(--card); padding:6px 10px; border-radius:8px; font-size:14px; color:#0a7d3b; font-weight:600;}
+  </style>
 </head>
 <body>
-<h1>교회소개</h1>
+  <div class="wrap">
+    <h1>교회소개</h1>
 
-<p>거산교회는 하나님 사랑, 이웃 사랑을 실천하며 지역과 다음세대를 세우는 교회입니다.</p>
+    <!-- 1) 교회 전경 -->
+    <img src="church.jpg" alt="거산교회 전경" class="hero">
 
-<p><a href="church.html">← 메인으로 돌아가기</a></p>
+    <!-- 2) 담임목사 -->
+    <div class="row">
+      <img src="pastor.jpg" alt="담임목사 도성구" class="portrait">
+      <div class="grow">
+        <p class="badge">담임목사 도성구</p>
+        <p>거산교회는 하나님 나라를 이 땅 가운데 세워나가기 위해 예배하고, 사랑하고, 섬기는 공동체입니다.</p>
+        <p>지역을 섬기고 다음 세대를 세우며, 복음으로 이웃과 열방을 향해 나아갑니다.</p>
+      </div>
+    </div>
 
+    <p class="back"><a href="index.html">← 메인으로 돌아가기</a></p>
+  </div>
 </body>
 </html>
