@@ -7,8 +7,8 @@
   <style>
     body {
       font-family: "Noto Sans KR", sans-serif;
-      margin: 0;
       background-color: #f9fff9;
+      margin: 0;
       color: #333;
     }
     nav ul {
@@ -16,9 +16,9 @@
       justify-content: center;
       gap: 30px;
       list-style: none;
-      background: #fff;
       margin: 0;
       padding: 12px 0;
+      background: #fff;
       font-weight: 700;
     }
     nav a {
@@ -28,12 +28,12 @@
     }
     header {
       text-align: center;
-      background: linear-gradient(#2a8b3f, #3ca656);
+      background: linear-gradient(#2a8b3f,#3ca656);
       color: #fff;
       padding: 50px 20px;
     }
     h1 {
-      font-size: 28px;
+      font-size: 32px;
       margin-bottom: 10px;
     }
     p {
@@ -50,19 +50,29 @@
     .gallery img {
       width: 100%;
       border-radius: 10px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
-      transition: 0.3s;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
     }
     .gallery img:hover {
       transform: scale(1.05);
     }
-    .video {
+    .album-link {
       text-align: center;
       margin: 40px 0;
     }
-    iframe {
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    .album-link a {
+      background: #2a8b3f;
+      color: #fff;
+      text-decoration: none;
+      padding: 14px 30px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 18px;
+      box-shadow: 0 3px 5px rgba(0,0,0,0.15);
+      transition: background 0.3s;
+    }
+    .album-link a:hover {
+      background: #237a37;
     }
     footer {
       text-align: center;
@@ -87,27 +97,22 @@
     <p>거산교회 성도님들과 함께한 행복한 순간들을 나눕니다.</p>
   </header>
 
-  <!-- 🎞 유튜브 또는 행사 영상 -->
-  <div class="video">
-    <iframe width="560" height="315"
-      src="https://www.youtube.com/embed/영상ID"
-      title="교회 행사 영상"
-      frameborder="0"
-      allowfullscreen>
-    </iframe>
-  </div>
-
-  <!-- 📸 구글포토 앨범 링크 -->
+  <!-- 썸네일 3~4장 미리보기 -->
   <div class="gallery">
     <a href="https://photos.app.goo.gl/앨범링크" target="_blank">
-      <img src="album1.jpg" alt="교회사진1">
+      <img src="album1.jpg" alt="교회앨범1">
     </a>
     <a href="https://photos.app.goo.gl/앨범링크" target="_blank">
-      <img src="album2.jpg" alt="교회사진2">
+      <img src="album2.jpg" alt="교회앨범2">
     </a>
     <a href="https://photos.app.goo.gl/앨범링크" target="_blank">
-      <img src="album3.jpg" alt="교회사진3">
+      <img src="album3.jpg" alt="교회앨범3">
     </a>
+  </div>
+
+  <!-- 구글포토로 이동 -->
+  <div class="album-link">
+    <a href="https://photos.app.goo.gl/앨범링크" target="_blank">📷 전체 앨범 열기</a>
   </div>
 
   <footer>© 거산교회. All rights reserved.</footer>
