@@ -1,1 +1,146 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>거산교회</title>
 
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="logo.png">
+  <link rel="manifest" href="manifest.json">
+
+  <style>
+    :root {
+      --brand: #2E7D32;
+      --brand2: #60A85B;
+      --bg: #f7fff7;
+      --soft: #c8e6c9;
+      --ink: #223;
+    }
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body {
+      font-family: "Nanum Gothic", system-ui, "Noto Sans KR", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.7;
+    }
+    a { color: var(--brand); text-decoration: none; transition: 0.2s; }
+    a:hover { opacity: 0.8; }
+
+    nav {
+      position: sticky; top:0; z-index:999;
+      background:#fff; border-bottom:1px solid var(--soft);
+    }
+    nav .inner {
+      max-width:1100px; margin:0 auto; padding:12px 20px;
+      display:flex; gap:22px; align-items:center; justify-content:center;
+    }
+    nav li { list-style:none; }
+    nav li a {
+      display:inline-block; padding:6px 8px;
+      font-weight:700; border-bottom:2px solid transparent;
+    }
+    nav li a:hover { border-color:var(--brand); }
+
+    header.hero {
+      background: linear-gradient(180deg, var(--brand), var(--brand2));
+      color:#fff; text-align:center; padding:80px 16px 56px;
+    }
+    header.hero h1 {
+      margin:0 0 10px; font-size:clamp(26px,4vw,40px);
+      letter-spacing:-1px;
+    }
+    header.hero p { font-size:18px; opacity:0.95; }
+
+    .btns {
+      display:flex; flex-wrap:wrap; gap:12px;
+      justify-content:center; margin-top:24px;
+    }
+    .btn {
+      background:#fff; border:2px solid #fff;
+      color:var(--brand); border-radius:999px;
+      padding:10px 16px; font-weight:800;
+    }
+    .btn.filled { background:#1b5e20; color:#fff; }
+
+    .wrap { max-width:1000px; margin:32px auto; padding:0 18px; }
+    .card {
+      background:#fff; border:1px solid var(--soft);
+      border-radius:14px; box-shadow:0 2px 8px rgba(0,0,0,0.06);
+      padding:20px; margin-bottom:20px;
+    }
+
+    .fact { color:var(--brand); font-weight:700; }
+    footer {
+      margin:36px 0 48px; text-align:center;
+      color:#667; font-size:14px;
+    }
+
+    /* 링크 색상 연하게 */
+    a.btn.filled { background:#2e7d32; color:#fff; }
+    a.btn.filled:hover { background:#4CAF50; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="inner">
+      <ul>
+        <li><a href="index.html">거산교회</a></li>
+        <li><a href="about.html">교회소개</a></li>
+        <li><a href="prayer.html">기도제목</a></li>
+        <li><a href="news.html">교회소식</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div style="text-align:center; margin-top:20px;">
+    <img src="logo.png" alt="거산교회 로고" style="width:120px; height:auto;">
+  </div>
+
+  <header class="hero">
+    <h1>“오라 우리가 여호와의 산에 올라가자”</h1>
+    <p>거룩한 산을 향하는 선교적 마을교회</p>
+    <div class="btns">
+      <a class="btn filled" href="about.html">교회소개</a>
+      <a class="btn" href="prayer.html">기도제목</a>
+      <a class="btn" href="news.html">교회소식</a>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <div class="card">
+      <h2>환영합니다</h2>
+      <p>거산교회는 <span class="fact">거산(巨山)</span>, 거룩한 산의 의미처럼 하나님의 임재가 머무는 공동체를 꿈꿉니다. 예수님과 동행하며 마을과 이웃을 섬기는 선교적 교회입니다.</p>
+      <ul>
+        <li>주일예배: <strong>오전 10시</strong></li>
+        <li>수요예배: <strong>오전 10시</strong></li>
+        <li>주소: 충남 아산시 송악면 외암로 223-12</li>
+        <li>연락처: 041-543-0211 · 이메일: bedts17@gmail.com</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>핵심 가치 (Core Values)</h2>
+      <p>
+        임재 – 하나님과 동행하는 교회<br>
+        진리 – 말씀에 기초한 신앙<br>
+        사랑 – 이웃을 품는 교회<br>
+        평화 – 상함과 해됨이 없는 공동체<br>
+        소망 – 새 시온을 바라보는 교회
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>신앙 실천</h2>
+      <div class="btns">
+        <a class="btn filled" href="https://jesuswalk.kr" target="_blank">예수동행일기</a>
+        <a class="btn filled" href="https://jesuswalkpray.kr" target="_blank">예수동행기도</a>
+        <a class="btn filled" href="https://www.ywampr.org" target="_blank">예수전도단</a>
+        <a class="btn filled" href="https://www.eagleministry.or.kr" target="_blank">독수리사역</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>© 거산교회. All rights reserved.</footer>
+</body>
+</html>
