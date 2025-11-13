@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>거산교회</title>
 
-  <!-- 로고 및 아이콘 -->
-  <link rel="icon" href="logo.png" type="image/png">
+  <!-- 아이콘 & PWA -->
+  <link rel="icon" href="favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="logo.png">
+  <link rel="manifest" href="manifest.json">
 
   <style>
     :root {
@@ -20,77 +21,162 @@
 
     * { box-sizing:border-box; }
     html, body {
-      margin:0; padding:0;
+      margin:0;
+      padding:0;
+      font-family:"Nanum Gothic", system-ui, -apple-system, "Segoe UI", sans-serif;
       background:var(--bg);
-      font-family:'Nanum Gothic', sans-serif;
       color:var(--ink);
     }
 
-    a { color:var(--brand2); text-decoration:none; transition:opacity .2s; }
+    a {
+      color:var(--brand2);
+      text-decoration:none;
+      transition:opacity .2s;
+    }
     a:hover { opacity:.8; }
 
-    /* 메뉴 */
+    /* 상단 메뉴 */
     nav {
-      position:sticky; top:0; z-index:999;
-      background:#fff; border-bottom:1px solid var(--soft);
+      position:sticky;
+      top:0;
+      z-index:999;
+      background:#fff;
+      border-bottom:1px solid var(--soft);
     }
     nav .inner {
-      max-width:1100px; margin:0 auto; padding:12px 10px;
-      display:flex; justify-content:center; gap:40px; flex-wrap:nowrap;
+      max-width:1100px;
+      margin:0 auto;
+      padding:12px 16px;
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+    nav ul {
+      list-style:none;
+      margin:0;
+      padding:0;
+      display:flex;
+      gap:40px;           /* 메뉴 간격 */
+      flex-wrap:wrap;
+      justify-content:center;
     }
     nav li {
-      list-style:none;
       display:inline-block;
       font-weight:700;
-      font-size:18px;
+      font-size:18px;     /* 메뉴 글씨 크기 */
       white-space:nowrap;
     }
-    nav li a:hover { border-bottom:2px solid var(--brand2); }
+    nav li a {
+      color:var(--brand);
+      border-bottom:2px solid transparent;
+      padding:4px 0;
+    }
+    nav li a:hover {
+      border-color:var(--brand2);
+    }
 
-    /* 헤더 */
+    /* 헤더(로고 + 말씀) */
     header.hero {
       background:linear-gradient(180deg,var(--brand),var(--brand2));
-      color:#fff; text-align:center; padding:70px 14px 55px;
+      color:#fff;
+      text-align:center;
+      padding:80px 16px 60px;
+    }
+    .hero-logo {
+      margin-bottom:24px;
+    }
+    .hero-logo img {
+      width:160px;
+      height:auto;
+      border-radius:50%;
+      box-shadow:0 8px 18px rgba(0,0,0,.15);
     }
     header.hero h1 {
-    font-size:clamp(22px,5vw,36px);
-    letter-spacing:-1px;
-    margin:0 0 10px;
-}
-    header.hero p { margin:0; opacity:.9; }
-
-    /* 내용 */
-    .wrap { max-width:1000px; margin:28px auto; padding:0 16px; }
-    .card {
-      background:#fff; border:1px solid var(--soft);
-      border-radius:14px; padding:22px; margin-bottom:20px;
-      box-shadow:0 2px 6px rgba(0,0,0,0.05);
+      font-size:clamp(22px,5vw,30px);  /* 말씀 글씨 살짝 줄임 */
+      letter-spacing:-1px;
+      margin:24px 0 10px;
     }
-    .card h2 { color:var(--brand); margin-top:0; }
+    header.hero p {
+      margin:0;
+      opacity:.9;
+    }
 
-    .btns { display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top:20px; }
+    .btns {
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      justify-content:center;
+      margin-top:24px;
+    }
     .btn {
-      background:#fff; border:2px solid var(--brand2); color:var(--brand2);
-      font-weight:800; padding:10px 16px; border-radius:999px; text-align:center;
+      background:#fff;
+      border:2px solid #fff;
+      color:var(--brand);
+      border-radius:999px;
+      padding:10px 24px;
+      font-weight:700;
+      display:inline-block;
     }
-    .btn.filled { background:var(--brand2); color:#fff; }
+    .btn.filled {
+      background:#1b5e20;
+      color:#fff;
+    }
 
-    footer { margin:40px 0 30px; text-align:center; color:#667; font-size:14px; }
-    footer a { color:var(--brand2); }
+    /* 공통 레이아웃 */
+    .wrap {
+      max-width:1000px;
+      margin:28px auto;
+      padding:0 16px;
+    }
+    .card {
+      background:#fff;
+      border:1px solid var(--soft);
+      border-radius:14px;
+      padding:22px;
+      margin-bottom:24px;
+      box-shadow:0 2px 8px rgba(0,0,0,.05);
+    }
+    .card h2 {
+      color:var(--brand);
+      margin-top:0;
+    }
+    .bullets {
+      padding-left:18px;
+    }
+    .bullets li {
+      margin:6px 0;
+    }
 
-    /* 이미지 */
+    .imgframe {
+      overflow:hidden;
+      border-radius:12px;
+      border:1px solid var(--soft);
+      background:#fff;
+    }
     .imgframe img {
-      width:85%;
-      max-width:360px;
+      width:100%;
       height:auto;
-      object-fit:contain;
-      border-radius:10px;
-      margin-bottom:25px;
-      box-shadow:0 2px 8px rgba(0,0,0,0.1);
+      display:block;
+    }
+
+    .twocol {
+      display:grid;
+      gap:18px;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    }
+
+    .fact {
+      color:var(--brand);
+      font-weight:700;
+    }
+
+    footer {
+      margin:36px 0 48px;
+      text-align:center;
+      color:#667;
     }
   </style>
 </head>
-
 <body>
 
   <!-- 메뉴 -->
@@ -105,13 +191,11 @@
     </div>
   </nav>
 
-  <!-- 로고 -->
-  <div style="text-align:center; margin-top:20px;">
-    <img src="logo.png" alt="거산교회 로고" style="width:140px; height:auto;">
-</div>
-
-  <!-- 헤더 -->
-  <header 8class="hero">
+  <!-- 로고 + 말씀 -->
+  <header class="hero">
+    <div class="hero-logo">
+      <img src="logo.png" alt="거산교회 로고">
+    </div>
     <h1>“오라 우리가 여호와의 산에 올라가자”</h1>
     <p>거룩한 산을 향하는 선교적 마을교회</p>
 
@@ -122,46 +206,52 @@
     </div>
   </header>
 
-  <!-- 교회 & 목사 사진 -->
-  <div style="text-align:center; margin-top:30px;">
-    <div class="imgframe">
-      <img src="geosan_church.jpg" alt="거산교회 전경">
-    </div>
-    <div class="imgframe">
-      <img src="pastor_photo.jpg" alt="담임목사 사진">
-    </div>
-  </div>
-
-  <!-- 교회 소개 -->
   <div class="wrap">
+    <!-- 소개 카드 -->
     <div class="card">
       <h2>환영합니다</h2>
       <p>
-        거산교회는 <strong>거산(巨山)</strong>, 거룩한 산의 의미처럼<br>
-        하나님의 임재가 머무는 공동체를 꿈꿉니다.<br>
-        예수님과 동행하며 마을과 이웃을 섬기는 선교적 교회입니다.
+        거산교회는 <span class="fact">거산(巨山), 거룩한 산</span>의 의미처럼,
+        하나님의 임재가 머무는 공동체를 꿈꿉니다. 예수님과 동행하며
+        마을과 이웃을 섬기는 선교적 교회입니다.
       </p>
-      <ul>
-        <li>주일예배: 오전 10시</li>
-        <li>수요예배: 오전 10시</li>
+      <ul class="bullets">
+        <li>주일예배: <strong>오전 10시</strong></li>
+        <li>수요예배: <strong>오전 10시</strong></li>
         <li>주소: 충남 아산시 송악면 외암로 223-12</li>
         <li>연락처: 041-543-0211 · 이메일: bedts17@gmail.com</li>
       </ul>
     </div>
 
-    <!-- 링크 영역 -->
+    <!-- 교회 & 담임목사 사진 -->
+    <div class="card">
+      <h2>교회 & 담임목사</h2>
+      <div class="twocol">
+        <div class="imgframe">
+          <img src="geosan_church.jpg" alt="거산교회 전경">
+        </div>
+        <div class="imgframe">
+          <img src="pastor_photo.jpg" alt="담임목사 사진">
+        </div>
+      </div>
+    </div>
+
+    <!-- 신앙 실천 & 링크 -->
     <div class="card">
       <h2>신앙 실천</h2>
+      <p>예수동행으로 하루를 살아가는 믿음의 여정을 함께 걸어갑니다.</p>
       <div class="btns">
-        <a class="btn filled" href="https://jwj.kr" target="_blank">예수동행일기</a>
-        <a class="btn filled" href="https://www.praywithjesus.org" target="_blank">예수동행기도</a>
-        <a class="btn filled" href="http://www.gmk.or.kr" target="_blank">예수전도단</a>
-        <a class="btn filled" href="http://www.bedts.org" target="_blank">독수리사역</a>
+        <a class="btn filled" href="https://jwj.kr" target="_blank" rel="noopener">예수동행일기</a>
+        <a class="btn filled" href="https://www.praywithjesus.org" target="_blank" rel="noopener">예수동행기도</a>
+        <a class="btn filled" href="http://www.gmk.or.kr" target="_blank" rel="noopener">예수전도단</a>
+        <a class="btn filled" href="http://www.bedts.org" target="_blank" rel="noopener">독수리사역</a>
       </div>
     </div>
   </div>
-  
 
-  <footer>© 거산교회. All rights reserved.</footer>
+  <footer>
+    © 거산교회. All rights reserved.
+  </footer>
+
 </body>
 </html>
